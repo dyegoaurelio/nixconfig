@@ -83,12 +83,15 @@
   users.users.dyego = {
     isNormalUser = true;
     description = "dyego";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
-    #  thunderbird
+      google-chrome
+      pkgs.gnomeExtensions.dash-to-dock
     ];
   };
+
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -101,9 +104,11 @@
     xdg-utils
     git
     pkgs.vscode
+    pkgs.docker
     pkgs.nodenv
     pkgs.python311
     pkgs.python310
+    pkgs.docker-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
