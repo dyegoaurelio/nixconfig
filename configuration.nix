@@ -28,6 +28,7 @@
 #   forceFullCompositionPipeline = true;
 
     # Modesetting is needed for most Wayland compositors
+# (uncomment to use wayland)
 #    modesetting.enable = true;
 
     # Use the open source version of the kernel module
