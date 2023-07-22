@@ -10,6 +10,37 @@
       ./hardware-configuration.nix
     ];
 
+
+## NVIDEA CONFIG
+
+ # Make sure opengl is enabled
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  # Tell Xorg to use the nvidia driver (also valid for Wayland)
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+
+    # Modesetting is needed for most Wayland compositors
+    modesetting.enable = true;
+
+    # Use the open source version of the kernel module
+    # Only available on driver 515.43.04+
+#    open = false;
+
+    # Enable the nvidia settings menu
+    nvidiaSettings = true;
+
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+## END OF NVIDEA CONFIG
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -45,6 +76,8 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+
+  services.flatpak.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -85,9 +118,12 @@
     description = "dyego";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      firefox
+      postman
+      blender
       google-chrome
       pkgs.gnomeExtensions.dash-to-dock
+      pkgs.gnomeExtensions.tactile
+      pkgs.gnomeExtensions.gsconnect
     ];
   };
 
@@ -100,15 +136,24 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    firefox
     wget
     xdg-utils
-    git
+    git    
+    tldr
+    xdg-desktop-portal-gnome
     pkgs.vscode
     pkgs.docker
-    pkgs.nodenv
+    pkgs.nodejs
     pkgs.python311
     pkgs.python310
+    pkgs.python38
+    pkgs.virtualenv
+    pkgs.zlib    
+    pkgs.gcc
     pkgs.docker-compose
+    pkgs.cmake
+    pkgs.gnumake
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
