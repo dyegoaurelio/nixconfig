@@ -124,9 +124,10 @@
       postman
       blender
       google-chrome
-      pkgs.gnomeExtensions.dash-to-dock
-      pkgs.gnomeExtensions.tactile
-      pkgs.gnomeExtensions.gsconnect
+      gnomeExtensions.dash-to-dock
+      gnomeExtensions.tactile
+      gnomeExtensions.gsconnect
+      gnomeExtensions.clipboard-indicator
     ];
   };
 
@@ -147,6 +148,8 @@
     xdg-desktop-portal-gnome
     libreoffice
     vlc
+    gping
+    tldr
     pkgs.vscode
     pkgs.docker
     pkgs.nodejs
