@@ -22,11 +22,13 @@
 
   # Tell Xorg to use the nvidia driver (also valid for Wayland)
   services.xserver.videoDrivers = ["nvidia"];
-
+  
   hardware.nvidia = {
 
+#   forceFullCompositionPipeline = true;
+
     # Modesetting is needed for most Wayland compositors
-    modesetting.enable = true;
+#    modesetting.enable = true;
 
     # Use the open source version of the kernel module
     # Only available on driver 515.43.04+
@@ -36,7 +38,8 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+
   };
 
 ## END OF NVIDEA CONFIG
@@ -142,6 +145,8 @@
     git    
     tldr
     xdg-desktop-portal-gnome
+    libreoffice
+    vlc
     pkgs.vscode
     pkgs.docker
     pkgs.nodejs
