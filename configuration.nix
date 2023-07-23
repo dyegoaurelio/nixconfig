@@ -25,21 +25,24 @@
   
   hardware.nvidia = {
 
-#   forceFullCompositionPipeline = true;
+   forceFullCompositionPipeline = true;
+
+#Fix graphical corruption on suspend/resume
+   powerManagement.enable = true;
 
     # Modesetting is needed for most Wayland compositors
 # (uncomment to use wayland)
-#    modesetting.enable = true;
+    modesetting.enable = true;
 
     # Use the open source version of the kernel module
     # Only available on driver 515.43.04+
-#    open = false;
+    open = false;
 
     # Enable the nvidia settings menu
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   };
 
@@ -123,7 +126,6 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       postman
-      blender
       google-chrome
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
@@ -151,6 +153,7 @@
     vlc
     gping
     tldr
+    kooha
     pkgs.vscode
     pkgs.docker
     pkgs.nodejs
