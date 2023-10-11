@@ -131,6 +131,13 @@ services.tlp = {
       };
 };
 
+
+  services.logind.extraConfig = ''
+     HandleLidSwitch=lock
+     HandleLidSwitchExternalPower=lock
+
+'';
+
   services.fprintd = {
     enable = true;
     package = pkgs.fprintd-tod;
