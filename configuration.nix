@@ -98,7 +98,7 @@
     description = "dyego";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      postman
+      #postman
       google-chrome
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
@@ -107,6 +107,7 @@
       gnomeExtensions.gesture-improvements
       gnomeExtensions.pop-shell
       gnomeExtensions.tiling-assistant
+      gnomeExtensions.dash2dock-lite
 
     ];
   };
@@ -170,7 +171,7 @@ services.tlp = {
     pkgs.nodejs
     pkgs.python311
     pkgs.python310
-    pkgs.python38
+    #pkgs.python38
     pkgs.virtualenv
     pkgs.zlib    
     pkgs.gcc
@@ -179,8 +180,13 @@ services.tlp = {
     pkgs.gnumake
 
     pavucontrol
+    linuxKernel.packages.linux_zen.xpadneo
+    linuxKernel.packages.linux_zen.system76
   ];
 
+
+  hardware.xpadneo.enable = true;
+  programs.steam.enable = true;
 
 programs.kdeconnect.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
