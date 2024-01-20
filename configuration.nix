@@ -100,6 +100,8 @@
     packages = with pkgs; [
       #postman
       google-chrome
+      floorp
+      gnucash
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
@@ -108,6 +110,7 @@
       gnomeExtensions.pop-shell
       gnomeExtensions.tiling-assistant
       gnomeExtensions.dash2dock-lite
+      gnomeExtensions.caffeine
 
     ];
   };
@@ -166,6 +169,7 @@ services.tlp = {
     gping
     tldr
     kooha
+    gamescope
     pkgs.vscode
     pkgs.docker
     pkgs.nodejs
@@ -184,7 +188,7 @@ services.tlp = {
     linuxKernel.packages.linux_zen.system76
   ];
 
-
+  boot.loader.systemd-boot.configurationLimit = 5;
   hardware.xpadneo.enable = true;
   programs.steam.enable = true;
 
