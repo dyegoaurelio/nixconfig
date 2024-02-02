@@ -102,6 +102,7 @@
       google-chrome
       floorp
       gnucash
+      thunderbird
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
