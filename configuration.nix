@@ -63,6 +63,7 @@
       floorp
       gnucash
       thunderbird
+      stow
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
