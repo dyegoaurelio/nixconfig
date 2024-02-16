@@ -8,6 +8,7 @@
       ./manual-hardware-configuration.nix
       ./laptop-specifc-configuration.nix
       ./nix-alien.nix
+      #./nix-encryption.nix
     ];
 
 }
