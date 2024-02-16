@@ -1,14 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./manual-hardware-configuration.nix
-      ./laptop-specifc-configuration.nix
-      ./nix-alien.nix
-    ];
-
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
 
