@@ -2,6 +2,11 @@
 
 {
 
+  imports =
+    [
+      ./suspend-and-hibernate.nix
+    ];
+
 # power saving
 services.power-profiles-daemon.enable = false;
 

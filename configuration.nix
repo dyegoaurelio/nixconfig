@@ -2,12 +2,11 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./manual-hardware-configuration.nix
       ./laptop-specifc-configuration.nix
       ./nix-alien.nix
-      ./suspend-and-hibernate.nix
     ];
 
   # Set your time zone.
