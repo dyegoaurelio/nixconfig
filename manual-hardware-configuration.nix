@@ -11,6 +11,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  ## limit generations number (avoid filling up boot partition)
+  boot.loader.systemd-boot.configurationLimit = 5;
+
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -40,5 +43,15 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+
+  # xbox controller support
+  environment.systemPackages = with pkgs; [
+    linuxKernel.packages.linux_zen.xpadneo
+    linuxKernel.packages.linux_zen.system76
+  ];
+
+  hardware.xpadneo.enable = true;
+
 
 }

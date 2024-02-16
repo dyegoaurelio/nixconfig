@@ -109,12 +109,8 @@
     pkgs.gnumake
 
     pavucontrol
-    linuxKernel.packages.linux_zen.xpadneo
-    linuxKernel.packages.linux_zen.system76
   ];
 
-  boot.loader.systemd-boot.configurationLimit = 5;
-  hardware.xpadneo.enable = true;
   programs.steam.enable = true;
 
 programs.kdeconnect.enable = true;
