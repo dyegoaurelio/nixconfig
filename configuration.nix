@@ -64,6 +64,7 @@
       gnucash
       thunderbird
       stow
+      bat
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
