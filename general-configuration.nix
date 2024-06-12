@@ -57,6 +57,8 @@
       thunderbird
       stow
       bat
+      bruno
+      mongodb-compass
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
@@ -66,7 +68,13 @@
       gnomeExtensions.tiling-assistant
       gnomeExtensions.dash2dock-lite
       gnomeExtensions.caffeine
+      gnomeExtensions.fullscreen-avoider
+      gnomeExtensions.blur-my-shell
 
+      gnomeExtensions.user-themes
+      
+      pkgs.dracula-theme
+      pkgs.adw-gtk3
     ];
   };
 
