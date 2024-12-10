@@ -52,14 +52,11 @@
     packages = with pkgs; [
       #postman
       google-chrome
-      floorp
       gnucash
-      thunderbird
       stow
       bat
       bruno
       resources
-      mongodb-compass
       gnomeExtensions.dash-to-dock
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
@@ -85,7 +82,6 @@
     xdg-desktop-portal-gnome
     libreoffice
     vlc
-    gping
     tldr
     kooha
     gamescope
@@ -94,7 +90,6 @@
     pkgs.nodejs
     pkgs.python311
     pkgs.python310
-    #pkgs.python38
     pkgs.virtualenv
     pkgs.zlib    
     pkgs.gcc
