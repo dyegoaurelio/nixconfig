@@ -58,20 +58,13 @@
       stow
       bat
       bruno
+      resources
       mongodb-compass
       gnomeExtensions.dash-to-dock
-      gnomeExtensions.tactile
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
-      gnomeExtensions.gesture-improvements
-      gnomeExtensions.pop-shell
       gnomeExtensions.tiling-assistant
-      gnomeExtensions.dash2dock-lite
       gnomeExtensions.caffeine
-      gnomeExtensions.fullscreen-avoider
-      gnomeExtensions.blur-my-shell
-
-      gnomeExtensions.user-themes
       
       pkgs.dracula-theme
       pkgs.adw-gtk3
