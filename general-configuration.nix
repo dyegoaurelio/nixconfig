@@ -44,6 +44,7 @@
       gnucash
       stow
       bat
+      ghostty
       gnomeExtensions.media-controls
       bruno
       resources
