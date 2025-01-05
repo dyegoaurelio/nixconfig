@@ -84,6 +84,7 @@
     pkgs.gnumake
 
     pavucontrol
+    gnomeExtensions.tiling-assistant
   ];
 
   programs.steam.enable = true;
