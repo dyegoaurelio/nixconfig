@@ -2,7 +2,8 @@
 
   {
   environment.systemPackages = with pkgs; [
-    pkgs.thefuck # zsh plugin
+    thefuck # zsh plugin
+    zoxide # zsh plugin
   ];
 
   users.defaultUserShell = pkgs.zsh;
@@ -15,7 +16,7 @@
     histSize = 10000;
     ohMyZsh = {
       enable = true;
-      plugins = [ "git" "thefuck" "golang" ];
+      plugins = [ "git" "thefuck" "golang" "zoxide"];
     };
   };
 
