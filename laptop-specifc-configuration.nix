@@ -2,6 +2,7 @@
 
 {
 
+  networking.hostName = "nixos-laptop";
   imports =
     [
       ./suspend-and-hibernate.nix
