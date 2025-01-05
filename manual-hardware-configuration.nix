@@ -38,16 +38,12 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-
-  # xbox controller support
   environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.xpadneo
-    linuxKernel.packages.linux_zen.system76
-
     # ipega controller support
     xboxdrv
   ];
 
+  # xbox controller support
   hardware.xpadneo.enable = true;
 
 
