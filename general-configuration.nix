@@ -48,6 +48,7 @@
       gnomeExtensions.media-controls
       bruno
       resources
+      direnv
       gnomeExtensions.dash-to-dock
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
