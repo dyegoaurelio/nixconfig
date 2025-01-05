@@ -20,8 +20,6 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -52,22 +50,20 @@
     packages = with pkgs; [
       #postman
       google-chrome
-      floorp
       gnucash
-      thunderbird
       stow
       bat
       gnomeExtensions.media-controls
+      bruno
+      resources
       gnomeExtensions.dash-to-dock
-      gnomeExtensions.tactile
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
-      gnomeExtensions.gesture-improvements
-      gnomeExtensions.pop-shell
       gnomeExtensions.tiling-assistant
-      gnomeExtensions.dash2dock-lite
       gnomeExtensions.caffeine
-
+      
+      pkgs.dracula-theme
+      pkgs.adw-gtk3
     ];
   };
 
@@ -85,7 +81,6 @@
     xdg-desktop-portal-gnome
     libreoffice
     vlc
-    gping
     tldr
     kooha
     gamescope
@@ -94,7 +89,6 @@
     pkgs.nodejs
     pkgs.python311
     pkgs.python310
-    #pkgs.python38
     pkgs.virtualenv
     pkgs.zlib    
     pkgs.gcc

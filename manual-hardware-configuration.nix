@@ -43,6 +43,9 @@
   environment.systemPackages = with pkgs; [
     linuxKernel.packages.linux_zen.xpadneo
     linuxKernel.packages.linux_zen.system76
+
+    # ipega controller support
+    xboxdrv
   ];
 
   hardware.xpadneo.enable = true;
