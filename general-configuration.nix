@@ -57,6 +57,7 @@
       thunderbird
       stow
       bat
+      gnomeExtensions.media-controls
       gnomeExtensions.dash-to-dock
       gnomeExtensions.tactile
       gnomeExtensions.gsconnect
