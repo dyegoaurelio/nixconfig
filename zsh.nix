@@ -11,8 +11,8 @@
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
     enable = true;
-    # enableCompletion = true;
-    enableCompletion = false;
+    enableCompletion = true;
+    enableBashCompletion = true;
     # autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     histSize = 10000;
@@ -23,6 +23,19 @@
     interactiveShellInit = ''
         source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
         source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+
+        # make down arrow key go to the menu  
+        # (needs to be at .zshrc)
+        # bindkey  "$terminfo[kcud1]"  menu-select
+
+        # Make Tab and ShiftTab go to the menu
+        # bindkey              '^I' menu-select
+        # bindkey "$terminfo[kcbt]" menu-select
+
+        # Make Tab and ShiftTab cycle through the menu
+        # bindkey -M menuselect              '^I'         menu-complete
+        # bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
       '';
   };
 
