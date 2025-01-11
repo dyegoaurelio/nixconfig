@@ -64,6 +64,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     smile # emoji picker
+    gnomeExtensions.smile-complementary-extension # allows auto pasting after selecting emoji
     wget
     xdg-utils
     git    
