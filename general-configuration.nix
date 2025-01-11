@@ -63,6 +63,7 @@
 
   environment.systemPackages = with pkgs; [
     firefox
+    smile # emoji picker
     wget
     xdg-utils
     git    
@@ -73,17 +74,17 @@
     tldr
     kooha
     gamescope
-    pkgs.vscode
-    pkgs.docker
-    pkgs.nodejs
-    pkgs.python311
-    pkgs.python310
-    pkgs.virtualenv
-    pkgs.zlib    
-    pkgs.gcc
-    pkgs.docker-compose
-    pkgs.cmake
-    pkgs.gnumake
+    vscode
+    docker
+    nodejs
+    python311
+    python310
+    virtualenv
+    zlib    
+    gcc
+    docker-compose
+    cmake
+    gnumake
 
     pavucontrol
     gnomeExtensions.tiling-assistant
