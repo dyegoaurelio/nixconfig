@@ -29,15 +29,17 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
-
   services.flatpak.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dyego = {
     isNormalUser = true;
     description = "dyego";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     packages = with pkgs; [
       #postman
       google-chrome
@@ -53,6 +55,7 @@
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.caffeine
+      nixfmt-rfc-style
     ];
   };
 
@@ -67,7 +70,7 @@
     gnomeExtensions.smile-complementary-extension # allows auto pasting after selecting emoji
     wget
     xdg-utils
-    git    
+    git
     tldr
     xdg-desktop-portal-gnome
     libreoffice
@@ -81,7 +84,7 @@
     python311
     python310
     virtualenv
-    zlib    
+    zlib
     gcc
     docker-compose
     cmake
@@ -93,7 +96,7 @@
 
   programs.steam.enable = true;
 
-programs.kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

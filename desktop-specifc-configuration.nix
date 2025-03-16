@@ -2,10 +2,10 @@
 
 {
     networking.hostName = "nixos-desktop";
-    fileSystems."/data/ssd_extra" =
-  { device = "/dev/disk/by-label/Files";
-    fsType = "ext4";
-  };
+  #   fileSystems."/data/ssd_extra" =
+  # { device = "/dev/disk/by-label/Files";
+  #   fsType = "ext4";
+  # };
 
 
 

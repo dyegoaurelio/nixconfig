@@ -5,7 +5,7 @@ let
     repo = "zsh";
     rev = "75ea3f5e1055291caf56b4aea6a5d58d00541c41";
     sha256 = "sha256-TuKC1wPdq2OtEeViwnAmitpdaanyXHJmBcqV+rHxy34=";
-    };
+  };
 
   zsh-customs = pkgs.stdenv.mkDerivation {
     name = "zsh-customs";
@@ -25,8 +25,8 @@ in
 {
   programs.zsh = {
     ohMyZsh = {
-    theme = "dracula";
-    custom = "${zsh-customs}";
-  };
+      theme = "dracula";
+      custom = "${zsh-customs}";
+    };
   };
 }
