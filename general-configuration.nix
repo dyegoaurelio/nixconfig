@@ -56,6 +56,7 @@
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.caffeine
       nixfmt-rfc-style
+      protonvpn-gui
     ];
   };
 
