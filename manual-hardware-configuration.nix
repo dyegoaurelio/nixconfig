@@ -42,8 +42,6 @@
   services.printing.enable = true;
 
   environment.systemPackages = with pkgs; [
-    # ipega controller support
-    xboxdrv
   ];
 
   # xbox controller support
