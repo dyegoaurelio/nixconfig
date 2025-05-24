@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
 
@@ -57,6 +62,12 @@
       gnomeExtensions.caffeine
       nixfmt-rfc-style
       protonvpn-gui
+
+      # c tools
+      gdb
+      seer
+      clang
+      clang-tools
     ];
   };
 
