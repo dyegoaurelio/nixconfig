@@ -16,7 +16,7 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
