@@ -61,6 +61,7 @@
       gnomeExtensions.caffeine
       nixfmt-rfc-style
       protonvpn-gui
+      (callPackage ./csv2ofx { })
 
       # c tools
       gdb
