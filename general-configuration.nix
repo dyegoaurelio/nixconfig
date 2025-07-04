@@ -55,7 +55,6 @@
       gnomeExtensions.media-controls
       bruno
       resources
-      direnv
       gnomeExtensions.dash-to-dock
       gnomeExtensions.gsconnect
       gnomeExtensions.clipboard-indicator
@@ -93,8 +92,16 @@
     vscode
     docker
     nodejs
-    python311
-    python310
+    (pkgs.python313.withPackages (
+      pythonPackages: with pythonPackages; [
+        ipykernel
+        notebook
+        pandas
+        requests
+        gql
+        aiohttp
+      ]
+    ))
     virtualenv
     zlib
     gcc
