@@ -46,7 +46,6 @@
       "docker"
     ];
     packages = with pkgs; [
-      #postman
       google-chrome
       gnucash
       stow
@@ -54,6 +53,7 @@
       ghostty
       gnomeExtensions.media-controls
       bruno
+      claude-code
       resources
       gnomeExtensions.dash-to-dock
       gnomeExtensions.gsconnect
@@ -101,6 +101,7 @@
         requests
         gql
         aiohttp
+        deepdiff
       ]
     ))
     virtualenv
