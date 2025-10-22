@@ -3,7 +3,9 @@
   python3Packages,
   fetchFromGitHub,
 }:
-
+let
+  meza = python3Packages.callPackage ./meza.nix { };
+in
 python3Packages.buildPythonApplication rec {
   pname = "csv2ofx";
   version = "0.34.0-PATCH";
