@@ -45,30 +45,41 @@
       "wheel"
       "docker"
     ];
-    packages = with pkgs; [
-      google-chrome
-      gnucash
-      stow
-      bat
-      ghostty
-      gnomeExtensions.media-controls
-      bruno
-      claude-code
-      resources
-      gnomeExtensions.dash-to-dock
-      gnomeExtensions.gsconnect
-      gnomeExtensions.clipboard-indicator
-      gnomeExtensions.caffeine
-      nixfmt-rfc-style
-      protonvpn-gui
-      (callPackage ./csv2ofx { })
+    packages =
+      with pkgs;
+      let
+        pkgs-unstable = import <nixpkgs-unstable> {
+          inherit (config.nixpkgs) config;
+        };
+      in
+      [
+        google-chrome
+        gnucash
+        stow
+        bat
+        ghostty
+        gnomeExtensions.media-controls
+        pkgs-unstable.bruno
+        pkgs-unstable.slack
+        resources
+        gnomeExtensions.dash-to-dock
+        gnomeExtensions.gsconnect
+        gnomeExtensions.clipboard-indicator
+        gnomeExtensions.caffeine
+        nixfmt-rfc-style
+        protonvpn-gui
+        (callPackage ./csv2ofx { })
 
-      # c tools
-      gdb
-      seer
-      clang
-      clang-tools
-    ];
+        # ai tools
+        pkgs-unstable.claude-code
+        pkgs-unstable.github-mcp-server
+
+        # c tools
+        gdb
+        seer
+        clang
+        clang-tools
+      ];
   };
 
   virtualisation.docker.enable = true;
