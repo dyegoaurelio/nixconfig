@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    thefuck # zsh plugin
     zoxide # smarter cd
     fzf # fuzzy finder used by zoxide
   ];
@@ -20,7 +19,6 @@
       enable = true;
       plugins = [
         "git"
-        "thefuck"
         "golang"
         "zoxide"
         "yarn"
