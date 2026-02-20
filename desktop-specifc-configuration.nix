@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./mt7902.nix ];
+
   networking.hostName = "nixos-desktop";
   fileSystems."/data/m2_extra" = {
     device = "/dev/disk/by-label/m2extra";

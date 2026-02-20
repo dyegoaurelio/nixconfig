@@ -1,0 +1,24 @@
+From: NixOS local <nixos@localhost>
+Subject: [PATCH] wifi: mt76: mt792x: remove is_mt7921 CHANCTX_STA_CSA check
+
+Preparatory patch for MT7902 series: this is_mt7921 check was removed
+upstream; remove it here so that the is_mt7921->is_connac2 rename
+in the MT7902 patch series doesn't leave a dangling reference.
+
+---
+ drivers/net/wireless/mediatek/mt76/mt792x_core.c | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/drivers/net/wireless/mediatek/mt76/mt792x_core.c b/drivers/net/wireless/mediatek/mt76/mt792x_core.c
+--- a/drivers/net/wireless/mediatek/mt76/mt792x_core.c
++++ b/drivers/net/wireless/mediatek/mt76/mt792x_core.c
+@@ -691,10 +691,6 @@ int mt792x_init_wiphy(struct ieee80211_hw *hw)
+ 	ieee80211_hw_set(hw, SUPPORTS_MULTI_BSSID);
+ 	ieee80211_hw_set(hw, SUPPORTS_ONLY_HE_MULTI_BSSID);
+
+-	if (is_mt7921(&dev->mt76)) {
+-		ieee80211_hw_set(hw, CHANCTX_STA_CSA);
+-	}
+-
+ 	if (dev->pm.enable)
+ 		ieee80211_hw_set(hw, CONNECTION_MONITOR);
