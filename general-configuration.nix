@@ -67,7 +67,7 @@
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.caffeine
         nixfmt
-        protonvpn-gui
+        proton-vpn
         (callPackage ./csv2ofx { })
 
         # ai tools
