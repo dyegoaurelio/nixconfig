@@ -67,6 +67,7 @@
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.caffeine
         nixfmt
+        pkgs-unstable.nixd
         proton-vpn
         (callPackage ./csv2ofx { })
 
