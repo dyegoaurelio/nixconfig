@@ -57,7 +57,8 @@
         gnucash
         stow
         bat
-        ghostty
+        pkgs-unstable.ghostty
+        pkgs-unstable.keep-sorted
         gnomeExtensions.media-controls
         pkgs-unstable.bruno
         pkgs-unstable.slack
@@ -66,6 +67,7 @@
         gnomeExtensions.gsconnect
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.caffeine
+        gnomeExtensions.bluetooth-battery-meter
         nixfmt
         pkgs-unstable.nixd
         proton-vpn
