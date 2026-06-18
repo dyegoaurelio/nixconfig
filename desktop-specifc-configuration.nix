@@ -13,6 +13,7 @@
   # };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = [ "ntsync" ];
 
   ## NVIDIA CONFIG
 
