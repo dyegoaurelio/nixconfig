@@ -71,7 +71,6 @@
         nixfmt
         pkgs-unstable.nixd
         proton-vpn
-        (callPackage ./csv2ofx { })
 
         # ai tools
         pkgs-unstable.claude-code
