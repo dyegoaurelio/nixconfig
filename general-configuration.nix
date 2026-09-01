@@ -36,6 +36,14 @@
 
   services.flatpak.enable = true;
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      pkgs-unstable = import <nixpkgs-unstable> {
+        inherit (prev) config;
+      };
+    })
+  ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dyego = {
     isNormalUser = true;
@@ -45,43 +53,36 @@
       "wheel"
       "docker"
     ];
-    packages =
-      with pkgs;
-      let
-        pkgs-unstable = import <nixpkgs-unstable> {
-          inherit (config.nixpkgs) config;
-        };
-      in
-      [
-        google-chrome
-        gnucash
-        stow
-        bat
-        pkgs-unstable.ghostty
-        pkgs-unstable.keep-sorted
-        gnomeExtensions.media-controls
-        pkgs-unstable.bruno
-        pkgs-unstable.slack
-        resources
-        gnomeExtensions.dash-to-dock
-        gnomeExtensions.gsconnect
-        gnomeExtensions.clipboard-indicator
-        gnomeExtensions.caffeine
-        gnomeExtensions.bluetooth-battery-meter
-        nixfmt
-        pkgs-unstable.nixd
-        proton-vpn
+    packages = with pkgs; [
+      google-chrome
+      gnucash
+      stow
+      bat
+      pkgs-unstable.ghostty
+      pkgs-unstable.keep-sorted
+      gnomeExtensions.media-controls
+      pkgs-unstable.bruno
+      pkgs-unstable.slack
+      resources
+      gnomeExtensions.dash-to-dock
+      gnomeExtensions.gsconnect
+      gnomeExtensions.clipboard-indicator
+      gnomeExtensions.caffeine
+      gnomeExtensions.bluetooth-battery-meter
+      nixfmt
+      pkgs-unstable.nixd
+      proton-vpn
 
-        # ai tools
-        pkgs-unstable.claude-code
-        pkgs-unstable.github-mcp-server
+      # ai tools
+      pkgs-unstable.claude-code
+      pkgs-unstable.github-mcp-server
 
-        # c tools
-        gdb
-        seer
-        clang
-        clang-tools
-      ];
+      # c tools
+      gdb
+      seer
+      clang
+      clang-tools
+    ];
   };
 
   virtualisation.docker.enable = true;
