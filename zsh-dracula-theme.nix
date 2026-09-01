@@ -25,7 +25,8 @@ in
 {
   programs.zsh = {
     ohMyZsh = {
-      theme = "dracula";
+      # Expanded at shell startup: per-user override via ZSH_USER_THEME
+      theme = "\${ZSH_USER_THEME:-dracula}";
       custom = "${zsh-customs}";
     };
   };

@@ -56,7 +56,6 @@
     packages = with pkgs; [
       google-chrome
       gnucash
-      stow
       bat
       pkgs-unstable.ghostty
       pkgs-unstable.keep-sorted
@@ -91,6 +90,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    stow
     firefox
     smile # emoji picker
     gnomeExtensions.smile-complementary-extension # allows auto pasting after selecting emoji
