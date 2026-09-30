@@ -42,6 +42,8 @@
         inherit (prev) config;
       };
     })
+
+    (import ./overlays/ai-usagebar.nix)
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -74,7 +76,9 @@
 
       # ai tools
       pkgs-unstable.claude-code
-      pkgs-unstable.github-mcp-server
+      pkgs-unstable.codex
+      ai-usagebar
+      gnomeExtensions.ai-usagebar
 
       # c tools
       gdb

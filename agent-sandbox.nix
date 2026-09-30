@@ -19,9 +19,11 @@ let
     # Group-readable so dyego (member of every agent group) can inspect the home.
     homeMode = "750";
     packages = with pkgs; [
-      pkgs-unstable.claude-code
       pkgs-unstable.ghostty.terminfo
 
+      pkgs-unstable.claude-code
+      pkgs-unstable.opencode
+      pkgs-unstable.codex
       bat
       nixfmt
     ];
