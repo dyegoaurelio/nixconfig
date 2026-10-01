@@ -16,7 +16,7 @@
 let
   # --- 1. Source ------------------------------------------------------------
 
-  version = "1.28.0";
+  version = "1.30.0";
 
   # This is an eval-time fetch rather than fetchFromGitHub because we import a
   # .nix file from it. Importing from a build output would be
@@ -25,7 +25,7 @@ let
   src = builtins.fetchTarball {
     name = "source";
     url = "https://github.com/akitaonrails/ai-usagebar/archive/refs/tags/v${version}.tar.gz";
-    sha256 = "sha256-jQ5Wgp3BePmcVfnstq+jAx0IjmTmad43gy1Ayxw01TQ=";
+    sha256 = "sha256:0zdkd4sf0jh2w0clgy4ggjh3inhk711vs570j65pb1cfhs3a4xhr";
   };
 
   # --- 2. Packages ----------------------------------------------------------
