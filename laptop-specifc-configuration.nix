@@ -26,11 +26,11 @@
     };
   };
 
-  services.logind.extraConfig = ''
-    HandleLidSwitch=lock
-    HandleLidSwitchExternalPower=lock
+  # services.logind.extraConfig = ''
+  #   HandleLidSwitch=lock
+  #   HandleLidSwitchExternalPower=lock
 
-  '';
+  # '';
 
   # fingerprint reader
   services.fprintd = {
